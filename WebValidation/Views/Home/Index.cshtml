@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewBag.Title = "Quipu";
+    //  Необходимо реализовать сервис, который должен осуществлять валидацию имени и пароля пользователя(консольное приложение). 
+    //  Следует предусмотреть логику, чтобы сервис возвращал положительный ответ, только, если имя пользователя представлено в виде адреса и пароль не содержит специальных символов.
+
+    // виходячи з контексту задачі я не використовував рішнень майкрософт на подобі "IValidatableObject", "ASP.NET Identity". 
+}
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    
+
+    @using (Html.BeginForm("Index", "Home"))
+    {
+        <p>Login: @Html.TextBox("login")</p>
+        <p>Password: @Html.Password("password")</p>
+        <input type="submit" value="LogIn">
+    }
+<p style="font: 2em Arial">@ViewData["Message"]</p>
+
+
+</body>
+</html>
